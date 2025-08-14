@@ -6,6 +6,7 @@ namespace OCA\Noxtr\AppInfo;
 
 use OCP\AppFramework\App;
 use OCA\Noxtr\DeclarativeSettings\NoxtrPersonalSettings;
+use OCA\Noxtr\DeclarativeSettings\NoxtrAdminSettings;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
@@ -20,6 +21,7 @@ class Application extends App implements IBootstrap {
 
     public function register(IRegistrationContext $context): void {
         $context->registerDeclarativeSettings(NoxtrPersonalSettings::class);
+        $context->registerDeclarativeSettings(NoxtrAdminSettings::class);
     }
 
     public function boot(IBootContext $context): void {

@@ -13,6 +13,15 @@
 	<category>social</category>
 	<bugs>https://github.com/nostriphant/noxtr/issues</bugs>
 	<dependencies>
-            <nextcloud min-version="30" max-version="32"/>
+            <nextcloud min-version="29" max-version="32"/>
         </dependencies>
+        <settings>
+            <admin-section>OCA\Noxtr\SettingSections\AdminSection</admin-section>
+        </settings>
+        <background-jobs>
+            <job>OCA\Noxtr\Cron\NIP65Task</job>
+        </background-jobs>
+        <commands>
+            <command>OCA\Noxtr\Command\NIP65</command>
+        </commands>
 </info>
